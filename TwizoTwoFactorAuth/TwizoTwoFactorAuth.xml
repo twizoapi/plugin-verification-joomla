@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="twofactorauth" method="upgrade">
+    <name>Twizo Two Factor Auth Plugin</name>
+    <creationDate>06/11/2017</creationDate>
+    <author>Twizo</author>
+    <authorEmail>info@twizo.com</authorEmail>
+    <authorUrl>https://www.twizo.com</authorUrl>
+    <copyright>Copyright (c) 2016-2017 Twizo</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>0.1.0</version>
+    <description>PLG_TWOFACTORAUTH_TWIZO_XML_DESCRIPTION</description>
+
+    <!-- Language files -->
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_twofactorauth_TwizoTwoFactorAuth.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_twofactorauth_TwizoTwoFactorAuth.sys.ini</language>
+    </languages>
+
+    <!-- Plugin files -->
+    <files>
+        <filename plugin="TwizoTwoFactorAuth">TwizoTwoFactorAuth.php</filename>
+        <folder>tmpl</folder>
+        <folder>sql</folder>
+        <folder>validation</folder>
+    </files>
+
+    <!--Install file-->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+        </sql>
+    </install>
+
+    <!-- Config parameter -->
+    <config>
+        <fields name="params"
+                addfieldpath="plugins/twofactorauth/TwizoTwoFactorAuth/fields"
+        >
+            <fieldset name="basic" addrulepath="plugins/twofactorauth/TwizoTwoFactorAuth/validation">
+                <field name="api_key" type="text"
+                       description="PLG_TWOFACTORAUTH_TWIZO_API_KEY_DESC"
+                       label="PLG_TWOFACTORAUTH_TWIZO_API_KEY_LABEL"
+                       validate="apiKey"
+                       required="true"
+                       autocomplete="0"
+                />
+
+                <field name="api_host" type="ApiHost"
+                       description="PLG_TWOFACTORAUTH_TWIZO_API_HOST_DESC"
+                       label="PLG_TWOFACTORAUTH_TWIZO_API_HOST_LABEL"
+                       size="3"
+                       required="true"
+                />
+                <field name="widget_logo" type="text"
+                       description="PLG_TWOFACTORAUTH_TWIZO_LOGO_URL_DESC"
+                       label="PLG_TWOFACTORAUTH_TWIZO_LOGO_URL_LABEL"
+                       validate="logoUrl"
+                       size="15"
+                />
+                <field name="sender" type="text"
+                       default="Twizo"
+                       label="PLG_TWOFACTORAUTH_TWIZO_SENDER_LABEL"
+                       description="PLG_TWOFACTORAUTH_TWIZO_SENDER_DESC"
+                       size="5"
+                       maxlength="11"
+                />
+                <field name="default_validation" type="list"
+                       default="sms"
+                       label="PLG_TWOFACTORAUTH_TWIZO_DEFAULT_VALIDATION_LABEL"
+                       description="PLG_TWOFACTORAUTH_TWIZO_DEFAULT_VALIDATION_DESC"
+                       size="5"
+                >
+                    <option value="sms">SMS</option>
+                    <option value="call">Call</option>
+                    <option value="biovoice">Bio voice</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

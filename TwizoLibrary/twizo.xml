@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" version="3.2" method="upgrade">
+    <name>Twizo Library</name>
+    <libraryname>Twizo</libraryname>
+    <creationDate>31/10/2017</creationDate>
+    <author>Twizo</author>
+    <authorEmail>info@twizo.com</authorEmail>
+    <authorUrl>http://twizo.com</authorUrl>
+    <copyright>Copyright (c) 2016 Twizo</copyright>
+    <version>0.10.0</version>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description>
+        Connect to the Twizo API using PHP.
+        This API includes functions to send verifications (2FA), SMS and Number Lookup.
+    </description>
+    <files>
+        <folder>src</folder>
+        <file>autoload.php</file>
+        <file>LICENSE</file>
+        <file>README.md</file>
+        <file>CHANGELOG.md</file>
+    </files>
+</extension>

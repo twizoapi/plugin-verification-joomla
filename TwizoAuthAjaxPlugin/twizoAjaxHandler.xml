@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="ajax" method="upgrade">
+    <name>Twizo Ajax Plugin</name>
+    <version>0.1.0</version>
+    <creationDate>06/11/2017</creationDate>
+    <author>Twizo</author>
+    <authorEmail>info@twizo.com</authorEmail>
+    <authorUrl>https://www.twizo.com</authorUrl>
+    <copyright>Copyright (c) 2016-2017 Twizo</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description>Twizo Plugin</description>
+    <files>
+        <filename plugin="twizoAjaxHandler">twizoAjaxHandler.php</filename>
+    </files>
+</extension>
