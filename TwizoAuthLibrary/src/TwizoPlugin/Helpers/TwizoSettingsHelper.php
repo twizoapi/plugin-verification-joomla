@@ -59,6 +59,26 @@ class TwizoSettingsHelper
     }
 
     /**
+     * Returns array of api hosts.
+     * Dynamic from online Json file
+     *
+     * @return array
+     * @since 0.1.0
+     */
+    public static function getVerificationTypesJSON()
+    {
+        $json = json_decode(file_get_contents(self::HTTPS_CDN_TWIZO_COM_INFORMATION_JSON), true);
+
+        $types = array();
+        foreach ($json["verificationTypes"] as $key => $type)
+        {
+            $types[$key] = $type;
+        }
+
+        return $types;
+    }
+
+    /**
      * Returns array of enabled verification Types
      *
      * @return array
@@ -134,5 +154,14 @@ class TwizoSettingsHelper
     public function getWidgetLogo()
     {
         return $this->twizoSettings["widget_logo"];
+    }
+
+    /**
+     * Returns true if plugin is enabled
+     * @return bool
+     */
+    public function enabled()
+    {
+        return isset($this->twizoSettings["api_key"]);
     }
 }

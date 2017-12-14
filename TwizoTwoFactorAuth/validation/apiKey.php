@@ -52,6 +52,9 @@ class JFormRuleApiKey extends FormRule
 
         $element->addAttribute('error', 'The api key is not correct.');
 
+        $value = null;
+        $form->setValue($element->getName(), null, null);
+
         return false;
     }
 }

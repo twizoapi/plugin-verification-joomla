@@ -16,7 +16,7 @@ FormHelper::loadFieldClass('list');
  * @link        https://twizo.com
  * @since       0.1.0
  */
-class JFormFieldApiHost extends JFormFieldList
+class JFormFieldEnabledTypes extends JFormFieldList
 {
     /**
      * The form field type.
@@ -24,17 +24,18 @@ class JFormFieldApiHost extends JFormFieldList
      * @var    string
      * @since  1.6
      */
-    protected $type = 'ApiHost';
+    protected $type = 'EnabledTypes';
 
     protected function getOptions()
     {
         $options = array();
 
-        $apiKeys = \TwizoPlugin\Helpers\TwizoSettingsHelper::getApiHosts();
-        foreach ($apiKeys as $apiKey)
+
+        $verificationTypesJSON = \TwizoPlugin\Helpers\TwizoSettingsHelper::getVerificationTypesJSON();
+        foreach ($verificationTypesJSON as $verificationType)
         {
-            $options[] = JHtmlSelect::option($apiKey["host"], $apiKey["location"] . " - " . key($apiKeys));
-            next($apiKeys);
+            $options[] = JHtmlSelect::option(key($verificationTypesJSON), $verificationType["translations"]["en"]);
+            next($verificationTypesJSON);
         }
 
         return $options;

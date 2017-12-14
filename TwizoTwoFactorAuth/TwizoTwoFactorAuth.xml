@@ -64,16 +64,12 @@
                        size="5"
                        maxlength="11"
                 />
-                <field name="default_validation" type="list"
+                <field name="default_validation" type="EnabledTypes"
                        default="sms"
                        label="PLG_TWOFACTORAUTH_TWIZO_DEFAULT_VALIDATION_LABEL"
                        description="PLG_TWOFACTORAUTH_TWIZO_DEFAULT_VALIDATION_DESC"
                        size="5"
-                >
-                    <option value="sms">SMS</option>
-                    <option value="call">Call</option>
-                    <option value="biovoice">Bio voice</option>
-                </field>
+                />
             </fieldset>
         </fields>
     </config>

@@ -19,9 +19,13 @@ class JFormRuleLogoUrl extends FormRule
 {
     public function test(SimpleXMLElement $element, $value, $group = null, Registry $input = null, Form $form = null)
     {
-        if (substr($value, 0, 7) === "https://")
+        $url = parse_url($value);
+
+        if ($url['scheme'] != 'https' && !is_null($value))
         {
+            $element->attributes()->message = "The current logo url is not in Https.";
             $element->addAttribute('error', 'The current logo url is not in Https.');
+            $element->addChild("EROOR");
 
             return false;
         }

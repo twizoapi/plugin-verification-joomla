@@ -1,4 +1,3 @@
-[Logo]: https://www.twizo.com/wp-content/themes/twizo/_/images/twizo-logo-0474ce6f.png
 ![Twizo logo](https://www.twizo.com/wp-content/themes/twizo/_/images/twizo-logo-0474ce6f.png)
 
 Twizo Authentication User guide

@@ -65,7 +65,8 @@ class plgAjaxTwizoAjaxHandler extends CMSPlugin
         parent::__construct($subject, $config);
 
         $plugin        = PluginHelper::getPlugin('twofactorauth', 'TwizoTwoFactorAuth');
-        $twizoSettings = (new Registry($plugin->params))->toArray();
+        $registry      = new Registry(!empty($plugin) ? $plugin->params : null);
+        $twizoSettings = !empty($registry) ? $registry->toArray() : [];
 
         $apiKey  = isset($twizoSettings['api_key']) ? $twizoSettings['api_key'] : null;
         $apiHost = isset($twizoSettings['api_host']) ? $twizoSettings['api_host'] : null;

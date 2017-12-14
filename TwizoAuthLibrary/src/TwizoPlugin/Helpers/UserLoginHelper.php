@@ -97,7 +97,7 @@ class UserLoginHelper
             "logoUrl"          => null
         );
 
-        if ($checkedCredentials && !empty($twizoData->getNumber()))
+        if ($checkedCredentials && !empty($twizoData->getNumber()) && $this->twizoSettingsHelper->enabled())
         {
             $result["trustedDevice"] = $this->trustedDeviceHelper->checkCookie($cookieValue, $username, $twizoData->getNumber());
             $result['enabled']       = true;
