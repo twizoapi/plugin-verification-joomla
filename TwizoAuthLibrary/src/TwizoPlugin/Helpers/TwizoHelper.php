@@ -62,6 +62,8 @@ class TwizoHelper
         // When recipient is not set a error is thrown.
         if (is_null($twizoData->getNumber()))
             throw new Exception('Recipient is not set');
+        if (!$this->twizoSettingsHelper->enabled())
+            throw new Exception('Plugin not enabled');
 
         $identifier        = $twizoData->getIdentifier();
         $recipient         = $twizoData->getNumber();

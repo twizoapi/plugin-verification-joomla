@@ -4,6 +4,7 @@ Twizo Authentication
 ===========================================================================
 A short explanation how to install and setup the plugin will be given.
 After this tutorial your users can add their phone numbers to enable Twizo Authentication.
+
 ----------------------------------------------------------------------------
 Installation
 ----------------------------------------------------------------------------
@@ -15,10 +16,11 @@ There are multiple ways of installation. Most common way is through the *Joomla 
 4. Click install
 
 ### ZIP File
-1. Download the [Twizo Auth Package](#TODOhttps://twizo.com/joomla-plugin-download) zip file
+1. Download the [Twizo Auth Package](https://github.com/twizoapi/plugin-verification-joomla/archive/master.zip) zip file
 2. Open the Joomla admin panel
 3. Go to **Extentions** -> **Manage** -> **install** -> **Upload Package File**
 4. Select the *Twizo Auth Package* in your downloads folder or drag it into your screen.
+
 ----------------------------------------------------------------------------
 Setup
 ----------------------------------------------------------------------------
