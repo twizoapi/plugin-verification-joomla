@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.2" type="plugin" group="ajax" method="upgrade">
-    <name>Twizo Ajax Plugin</name>
-    <version>0.1.0</version>
+    <name>Ajax - Twizo verification</name>
+    <version>0.1.1</version>
     <creationDate>06/11/2017</creationDate>
     <author>Twizo</author>
     <authorEmail>info@twizo.com</authorEmail>

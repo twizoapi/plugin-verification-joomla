@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+    <update>
+        <name>Twizo Authentication Package</name>
+        <description>Package that enables the use of the twizo 2fa plugin</description>
+        <element>pkg_TwizoAuth</element>
+        <type>package</type>
+        <version>0.1.1</version>
+        <infourl title="Twizo Authentication Package">https://github.com/twizoapi/plugin-verification-joomla/releases/tag/0.1.1</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/twizoapi/plugin-verification-joomla/releases/download/0.1.1/pkg_TwizoAuth_0.1.1.zip</downloadurl>
+        </downloads>
+        <targetplatform name="joomla" version="3.[6789]" />
+    </update>
+</updates>
