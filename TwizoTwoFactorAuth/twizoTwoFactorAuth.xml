@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.2" type="plugin" group="twofactorauth" method="upgrade">
-    <name>Twizo Two Factor Auth Plugin</name>
+    <name>Twofactorauth - Twizo verification</name>
     <creationDate>06/11/2017</creationDate>
     <author>Twizo</author>
     <authorEmail>info@twizo.com</authorEmail>
     <authorUrl>https://www.twizo.com</authorUrl>
     <copyright>Copyright (c) 2016-2017 Twizo</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-    <version>0.1.0</version>
+    <version>0.1.2</version>
     <description>PLG_TWOFACTORAUTH_TWIZO_XML_DESCRIPTION</description>
 
     <!-- Language files -->
@@ -18,7 +18,7 @@
 
     <!-- Plugin files -->
     <files>
-        <filename plugin="TwizoTwoFactorAuth">TwizoTwoFactorAuth.php</filename>
+        <filename plugin="Twofactorauth - Twizo Verification">TwizoTwoFactorAuth.php</filename>
         <folder>tmpl</folder>
         <folder>sql</folder>
         <folder>validation</folder>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="library" version="3.2" method="upgrade">
-    <name>Twizo plugin Library</name>
+    <name>Twizo auth Library</name>
     <libraryname>TwizoPlugin</libraryname>
     <creationDate>26/09/2017</creationDate>
     <author>Twizo</author>

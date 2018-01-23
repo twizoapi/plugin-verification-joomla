@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="3.2" method="upgrade">
-    <name>Twizo Authentication Package</name>
+    <name>Package - Twizo Verification</name>
     <author>Twizo</author>
     <authorEmail>info@twizo.com</authorEmail>
     <packagename>TwizoAuthentication</packagename>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <url>https://www.twizo.com/</url>
     <packager>Twizo</packager>
     <creationDate>06/11/2017</creationDate>
     <copyright>Copyright (c) 2016-2017 Twizo</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
     <packagerurl>https://www.twizo.com/</packagerurl>
-    <description>Package that enables the use of the twizo 2fa plugin</description>
-    <!--<updateservers>-->
-        <!--&lt;!&ndash;TODO Add update sever.&ndash;&gt;-->
-        <!--<server type="collection" priority="1" name="pkg_teste"><![CDATA[http://UPDATE SERVER HERE .xml]]></server>-->
-    <!--</updateservers>-->
+    <description>Package that enables the use of the twizo verification plugin</description>
+    <updateservers>
+        <!--TODO Add update sever.-->
+        <server type="collection" priority="1" name="pkg_TwizoVerification"><![CDATA[http://UPDATE SERVER HERE .xml]]></server>
+    </updateservers>
     <files folder="packages">
         <file type="library" id="Twizo">TwizoLibrary.zip</file>
         <file type="library" id="TwizoPlugin">TwizoAuthLibrary.zip</file>
-        <file type="plugin" id="plg_Ajax_TwizoAjaxHandler" group="ajax">TwizoAuthAjaxPlugin.zip</file>
-        <file type="plugin" id="plg_system_twizoReadyUp" group="system">TwizoAuthSystemPlugin.zip</file>
-        <file type="plugin" id="plg_Twofactorauth_TwizoTwoFactorAuth" group="twofactorauth">
+        <file type="plugin" id="plg_Ajax_TwizoVerification" group="ajax">TwizoAuthAjaxPlugin.zip</file>
+        <file type="plugin" id="plg_System_TwizoVerification" group="system">TwizoAuthSystemPlugin.zip</file>
+        <file type="plugin" id="plg_Twofactorauth_TwizoVerification" group="twofactorauth">
             TwizoTwoFactorAuth.zip
         </file>
     </files>

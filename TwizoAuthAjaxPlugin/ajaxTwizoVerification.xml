@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.2" type="plugin" group="ajax" method="upgrade">
     <name>Ajax - Twizo verification</name>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <creationDate>06/11/2017</creationDate>
     <author>Twizo</author>
     <authorEmail>info@twizo.com</authorEmail>
@@ -10,6 +10,6 @@
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
     <description>Twizo Plugin</description>
     <files>
-        <filename plugin="twizoAjaxHandler">twizoAjaxHandler.php</filename>
+        <filename plugin="Ajax - Twizo verification">ajaxTwizoVerification.php</filename>
     </files>
 </extension>
