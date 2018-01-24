@@ -1,5 +1,3 @@
-![Twizo logo](https://www.twizo.com/wp-content/themes/twizo/_/images/twizo-logo-0474ce6f.png)
-
 Twizo Authentication
 ===========================================================================
 A Twizo Authentication plugin. Solely made for Joomla! 3.2 and higher.
